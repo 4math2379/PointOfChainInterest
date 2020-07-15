@@ -1,0 +1,14 @@
+{
+  "name": "locachain",
+  "version": "1.0.0",
+  "description": "mapping services for pinning POI anonymously",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sinien Rahma",
+  "license": "ISC",
+  "dependencies": {
+    "mapbox-gl": "^1.11.0"
+  }
+}
