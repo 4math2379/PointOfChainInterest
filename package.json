@@ -9,6 +9,7 @@
   "author": "Sinien Rahma",
   "license": "ISC",
   "dependencies": {
+    "ipfs": "^0.48.0",
     "mapbox-gl": "^1.11.0"
   }
 }
