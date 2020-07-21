@@ -24,7 +24,7 @@ res.render('index');
 
 app.post('/upload', (req, res )=> {
     const file = req.files.file;
-    const fileName = req.body.fileName;
+    const fileName = req.body.poiName;
     const filePath = 'files/' + fileName;
 
 
