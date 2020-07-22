@@ -9,6 +9,11 @@ The purpose is to use [fileCoins](https://docs.filecoin.io/how-to/install-fileco
 
 for the Mapping services :earth_americas: , i use [Mapobox](https://www.mapbox.com/).
 
-
+For the logging a simple storage *Smart contract* with a *Metamask* injection.
 
 The value for potential users are to share  **anonimously** their interest on the map and the objective is to share an  action for the envionnement.
+
+
+## HACKFS project 🖥
+
+It was an idea i have for the [HackFS](https://hackfs.com/)
