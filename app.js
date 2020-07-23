@@ -3,13 +3,32 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
-
+const Web3 = require('web3');
+//build the contract
 
 
 //connect to the ipfs network
 
 const ipfs = new ipfsClient({host: 'localhost', port: '5001',  protocol:'http'});
 const app = express();
+
+
+
+//web3 injection
+const ethEnabled = () => {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum);
+      window.ethereum.enable();
+      return true;
+    }
+    return false;
+  }
+
+
+
+if (!ethEnabled()) {
+    alert("Please install an Ethereum-compatible browser or extension like MetaMask to use this dApp!");
+  }
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
