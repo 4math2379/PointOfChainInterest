@@ -4,7 +4,17 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const Web3 = require('web3');
-//build the contract
+//build the contract and the auth
+
+
+
+//parameters to initialize meta authentification 
+const MetaAuth = require('meta-auth')({
+    message: 'msg',
+    signature: 'sig',
+    address: 'address'
+});
+const metaAuth = MetaAuth();
 
 
 //connect to the ipfs network

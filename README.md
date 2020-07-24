@@ -7,13 +7,38 @@
 
 The purpose is to use [fileCoins](https://docs.filecoin.io/how-to/install-filecoin/) network in order to build a Wiki location services.
 
-for the Mapping services :earth_americas: , i use [Mapobox](https://www.mapbox.com/).
+For the Mapping services :earth_americas: , i use [Mapobox](https://www.mapbox.com/).
 
-For the logging a simple storage *Smart contract* with a *Metamask* injection.
+For the logging a Simple Storage *Smart contract* with a *Metamask* injection.
 
+When users accept the Smart contract, if he hold some ERC720 Tokens they can marked
+a Point Of Interest (POI). The marked action will be hashed and publish in the IPFS network.
+
+By this action, users will only share their datas of the location , their ETH address and the hash
+of the transaction.
+ 
 The value for potential users are to share  **anonimously** their interest on the map and the objective is to share an  action for the envionnement.
 
 
-## HACKFS project 🖥
+## The Eco or Green actions 📗 :green_apple:
+1. Purely a concept: Imagine you cleaning a beach or a borders river  in your city ? Or helping
+anyone to clean the streets of cigarettes butt ?
+
+2. Just mark it on the Map , other user who travel near the position can see it and participate.
+
+
+
+
+
+
+
+# HACKFS project 🖥
 
 It was an idea i have for the [HackFS](https://hackfs.com/)
+
+
+
+
+
+
+

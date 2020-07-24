@@ -16,6 +16,7 @@
     "ipfs": "^0.48.0",
     "ipfs-http-client": "^45.0.0",
     "mapbox-gl": "^1.11.0",
+    "meta-auth": "^1.1.2",
     "web3": "^1.2.11"
   }
 }
