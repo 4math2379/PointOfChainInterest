@@ -16,15 +16,33 @@
 
         #map {
           position: absolute;
+          right: 150px;
+          height: 120;
           top: 0;
           bottom: 0;
-          width: 100%;
+          width: 50%;
+        }
+
+        .enableEthereumButton {
+          position: relative;
+          left: 75px;
+          border: none;
+    color: rgba(2, 10, 0, 0.333);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
         }
     </style>
 </head>
 <body>
 
-  <div id='map'></div>
+
+  <div><button class="enableEthereumButton">Enable Ethereum</button></div>
+
+  <div id='map' , width='50%' height='200px'></div>
+
 
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiYmxvY2tjaGFpbjEwMSIsImEiOiJja2MzaTRra2EyODd1MnFvNGtpdHp1dmV5In0.7brnBDYpOuNYa2axy2tYlA';
@@ -43,6 +61,18 @@
     trackUserLocation: true
 }));
 
+
+
+
+//ethereum connection 
+const ethereumButton = document.querySelector('.enableEthereumButton');
+
+
+ethereumButton.addEventListener('click', () => {
+  //Will Start the metamask extension
+  ethereum.request({ method: 'eth_requestAccounts' });
+});
+
   var marker = new mapboxgl.Marker() // Initialize a new marker
     .setLngLat([-122.25948, 37.87221]) // Marker [lng, lat] coordinates
     .addTo(map); // Add the marker to the map
@@ -55,7 +85,7 @@
     mapboxgl: mapboxgl, // Set the mapbox-gl instance
     marker: false, // Do not use the default marker style
     placeholder: 'Search for places' // Placeholder text for the search bar
-    
+      
   });
 
   // Add the geocoder to the map
@@ -87,6 +117,7 @@
     // Add a marker at the result's coordinates
     geocoder.on('result', function(ev) {
       map.getSource('single-point').setData(ev.result.geometry);
+      
     });
 
 

@@ -4,17 +4,13 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const Web3 = require('web3');
+//const IPFS = require('ipfs');
+
 //build the contract and the auth
 
 
 
-//parameters to initialize meta authentification 
-const MetaAuth = require('meta-auth')({
-    message: 'msg',
-    signature: 'sig',
-    address: 'address'
-});
-const metaAuth = MetaAuth();
+
 
 
 //connect to the ipfs network
@@ -24,21 +20,7 @@ const app = express();
 
 
 
-//web3 injection
-const ethEnabled = () => {
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum);
-      window.ethereum.enable();
-      return true;
-    }
-    return false;
-  }
 
-
-
-if (!ethEnabled()) {
-    alert("Please install an Ethereum-compatible browser or extension like MetaMask to use this dApp!");
-  }
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -57,7 +39,7 @@ app.post('/upload', (req, res )=> {
     const filePath = 'files/' + fileName;
 
 
-    //move to server twek for coordinate not files 
+    //move to server tweak for coordinate not files 
 
     file.mv(filePath, async (err)=>{
         if (err) {
