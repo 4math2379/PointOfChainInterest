@@ -32,9 +32,9 @@ anyone to clean the streets of cigarettes butt ?
 
 
 
-# HACKFS project 🖥
 
-It was an idea i have for the [HackFS](https://hackfs.com/)
+
+
 
 
 
