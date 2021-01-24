@@ -14,10 +14,10 @@ For the logging a Simple Storage *Smart contract* with a *Metamask* injection.
 When users accept the Smart contract, if he hold some ERC720 Tokens they can marked
 a Point Of Interest (POI). The marked action will be hashed and publish in the IPFS network.
 
-By this action, users will only share their datas of the location , their ETH address and the hash
+By this action, users will only share their data of the location , their ETH address and the hash
 of the transaction.
  
-The value for potential users are to share  **anonimously** their interest on the map and the objective is to share an  action for the envionnement.
+The value for potential users are to share  **anonimously** their interest on the map and the objective is to share an  action for the environnement.
 
 
 ## The Eco or Green actions 📗 :green_apple:
@@ -25,6 +25,14 @@ The value for potential users are to share  **anonimously** their interest on th
 anyone to clean the streets of cigarettes butt ?
 
 2. Just mark it on the Map , other user who travel near the position can see it and participate.
+
+## Being Anonymous and adding POI with a hash 
+ - [x] Using IPFS Network
+ - [ ] Using the IPFS tech in order to **PIN** the coordinates.
+ - [ ] Connect to a public Blockchain
+
+
+
 
 
 
