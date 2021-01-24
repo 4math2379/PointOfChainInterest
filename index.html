@@ -107,8 +107,14 @@ mapboxgl: mapboxgl
             map.getCanvas().style.cursor = '';
         });
 
-
-
+//drag the map user 
+        map.dragPan.enable({
+            linearity:0.3,
+            easing: bezier(0,0,0,3,1),
+            maxSpeed:1400,
+            deceleration:2500
+        });
+        
 
 
 		

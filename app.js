@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const Web3 = require('web3');
-//const IPFS = require('ipfs');
+const IPFS = require('ipfs');
 
 //build the contract and the auth
 
@@ -13,7 +13,11 @@ const Web3 = require('web3');
 
 
 
+
 //connect to the ipfs network
+
+const node =  IPFS.create()
+
 
 const ipfs = new ipfsClient({host: 'localhost', port: '5001',  protocol:'http'});
 const app = express();
