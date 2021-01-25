@@ -28,7 +28,8 @@ type="text/css"
 </style>
 <div id="map"></div>
 <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoiYmxvY2tjaGFpbjEwMSIsImEiOiJja2MzaTRra2EyODd1MnFvNGtpdHp1dmV5In0.7brnBDYpOuNYa2axy2tYlA';
+    require('dotenv').config()
+	mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
