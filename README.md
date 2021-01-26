@@ -30,6 +30,7 @@ anyone to clean the streets of cigarettes butt ?
  - [x] Using IPFS Network
  - [ ] Using the IPFS tech in order to **PIN** the coordinates.
  - [ ] Connect to a public Blockchain
+ - [x] connect to Geojson for testing charting dataset
 
 
 

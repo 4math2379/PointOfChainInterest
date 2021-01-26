@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"date":"2020/10/1","pm25":41,"pm10":18,"o3":14,"no2":26,"so2":2,"co":0},"geometry":{"type":"Point","coordinates":[2.3522219,48.856614]}}]}
