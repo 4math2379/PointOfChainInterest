@@ -27,10 +27,11 @@ anyone to clean the streets of cigarettes butt ?
 2. Just mark it on the Map , other user who travel near the position can see it and participate.
 
 ## Being Anonymous and adding POI with a hash 
- - [x] Using IPFS Network
+ - [x] Using IPFS Network 🔓
  - [ ] Using the IPFS tech in order to **PIN** the coordinates.
- - [ ] Connect to a public Blockchain
- - [x] connect to Geojson for testing charting dataset
+ - [ ] Connect to a public Blockchain ⛓️
+ - [x] connect to Geojson for testing charting dataset :earth_africa:
+ - [ ] Create Web3 injection. 💊
 
 
 
