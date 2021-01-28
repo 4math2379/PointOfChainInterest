@@ -5,10 +5,44 @@ const fileUpload = require('express-fileupload');
 const fs = require('fs');
 const Web3 = require('web3');
 const IPFS = require('ipfs');
+const metamaskOnboarding = require('@metamask/onboarding');
+
 
 //build the contract and the auth
 
 
+
+
+
+const isMetaMaskInstalled = () => {
+    const { ethereum } = window
+    return Boolean(ethereum && ethereum.isMetaMask)
+}
+
+
+
+
+
+
+
+
+
+
+//end scope initialize
+
+
+
+function getPermissionsDisplayString (permissionsArray) {
+  if (permissionsArray.length === 0) {
+    return 'No permissions found.'
+  }
+  const permissionNames = permissionsArray.map((perm) => perm.parentCapability)
+  return permissionNames.reduce((acc, name) => `${acc}${name}, `, '').replace(/, $/u, '')
+
+
+
+    }
+    
 
 
 
@@ -75,6 +109,40 @@ const addPoi = async(poiName, poiPath) => {
 
     return poiHash;
 };
+
+//adding web3 stuff 
+
+let web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
+//const accounts = web3.eth.accounts;
+//const accounts = await ethereum.request({ method: 'eth_accounts' });
+
+
+
+
+
+let count = 0;
+let prev = 0 
+setInterval (function () {
+//getweb3 eth block ..... ?
+web3.eth.getBlock('latest', function (e, res){
+    if (res.number >= prev) {
+        console.log('latest', count++ ,  res.number, res.timestamp)
+        } else {
+            console.log('laster', count++, res.number, res.timestamp, 'Passed age block')
+        }
+        prev =res.number
+
+
+
+})
+
+
+
+}, 2000)
+
+
+
+
 
 
 app.listen(3000, () =>{
